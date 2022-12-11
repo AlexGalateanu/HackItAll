@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        .button {
+          display: inline-block;
+          border-radius: 4px;
+          background-color: rgb(0, 123, 255);
+          border: none;
+          color: #FFFFFF;
+          text-align: center;
+          font-size: 15px;
+          padding: 8px;
+          width: 300px;
+          transition: all 0.5s;
+          cursor: pointer;
+          margin: 5px;
+        }
+        
+        .button span {
+          cursor: pointer;
+          display: inline-block;
+          position: relative;
+          transition: 0.5s;
+        }
+        
+        .button span:after {
+          content: '\00bb';
+          position: absolute;
+          opacity: 0;
+          top: 0;
+          right: -20px;
+          transition: 0.5s;
+        }
+        
+        .button:hover span {
+          padding-right: 25px;
+        }
+        
+        .button:hover span:after {
+          opacity: 1;
+          right: 0;
+        }
+        </style>
+        <h2><b>Despre ce vrei sa vorbim?</b></h2>
+        <h4>Alege unul dintre subiectele de mai jos, pentru care programezi vizita in unitate.</h4>
+        <script>
+            function detalii_depunere() {
+                document.getElementById("depunere").innerHTML = "Atentie! Pentru retragerile de numerar de peste 3,000 de euro, te invitam sa ne contactezi telefonic la *2227 (apeluri nationale) sau +4021 407 4200 (apeluri internationale). De asemenea, daca doresti sa retragi ORICE suma in alta valuta diferita de lei, euro sau dolari americani, te rugam sa ne contactezi.";
+            }
+        </script>
+        <script>
+            function detalii_rata() {
+                
+                document.getElementById("rata").innerHTML = "Plata ratelor pentru toate tipurile de credit";
+            }
+        </script>
+        <script>
+            function detalii_operatie() {
+                document.getElementById("operatie").innerHTML = "Cont curent, card de debit, tranzactii, George si servicii digitale, administrare cont si card.";
+            }
+        </script>
+        <script>
+            function detalii_cont_nou() {
+                document.getElementById("cont_nou").innerHTML = "Deschidere cont curent";
+            }
+        </script>
+        <script>
+            function detalii_cont_minori() {
+                document.getElementById("cont_minori").innerHTML = "Deschidere cont persoane sub 18 ani.";
+            }
+        </script>
+        <script>
+            function detalii_cont_refugiati() {
+                document.getElementById("cont_refugiati").innerHTML = "Deschidere conturi refugiati";
+            }
+        </script>
+        <script>
+            function detalii_suport() {
+                document.getElementById("suport").innerHTML = "Activare George (etoken), servicii";
+            }
+        </script>
+        <script>
+            function detalii_diagnostic() {
+                document.getElementById("diagnostic").innerHTML = "Diagnostic financiar gratuit";
+            }
+        </script>
+        <script>
+            function detalii_nevoie_personale() {
+                document.getElementById("nevoie_personale").innerHTML = "Inclusiv card credit si descoperit de cont.";
+            }
+        </script>
+        <script>
+            function detalii_ipotecar() {
+                document.getElementById("ipotecar").innerHTML = "Casa Mea, Noua Casa";
+            }
+        </script>
+        <script>
+            function detalii_economisire() {
+                document.getElementById("economisire").innerHTML = "Depozit, cont de economii.";
+            }
+        </script>
+        <script>
+            function detalii_contracte() {
+                document.getElementById("contracte").innerHTML = "Banca pentru Locuinte";
+            }
+        </script>
+        <script>
+            function detalii_investitii_s() {
+                document.getElementById("investitii_s").innerHTML = "Fonduri mutuale, Capital Plan, Titluri de stat, Obligatiuni structurate, Aur (lingouri si monede) etc.";
+            }
+        </script>
+        <script>
+            function detalii_investitii_r() {
+                document.getElementById("investitii_r").innerHTML = "Fonduri mutuale, Capital Plan, Titluri de stat, Obligatiuni structurate, Aur (lingouri si monede) etc.";
+            }
+        </script>
+        <script>
+            function detalii_asigurare() {
+                document.getElementById("asigurare").innerHTML = "Viata, casa, bunuri.";
+            }
+        </script>
+        <script>
+            function detalii_pensie() {
+                document.getElementById("pensie").innerHTML = "Pilon 3 de la BCR Pensii.";
+            }
+        </script>
+        <button class="button" style="vertical-align:middle" onclick="detalii_depunere()"><span><b>Depunere sau retragere de bani</b></span></button>
+        <p id="depunere"></p>
+        <button class="button" style="vertical-align:middle" onclick="detalii_rata()"><span><b>Plata rata credit</b></span></button>
+        <p id="rata"></p>
+        <button class="button" style="vertical-align:middle" onclick="detalii_operatie()"><span><b>Operatiune fara numerar</b></span></button>
+        <p id="operatie"></p>
+        <button class="button" style="vertical-align:middle" onclick="detalii_cont_nou()"><span><b>Deschidere cont curent</b></span></button>
+        <p id="cont_nou"></p>
+        <button class="button" style="vertical-align:middle" onclick="detalii_cont_minori()"><span><b>Deschidere cont minori</b></span></button>
+        <p id="cont_minori"></p>
+        <button class="button" style="vertical-align:middle" onclick="detalii_cont_refugiati()"><span><b>Deschidere conturi refugiati</b></span></button>
+        <p id="cont_refugiati"></p>
+        <button class="button" style="vertical-align:middle" onclick="detalii_suport()"><span><b>Suport utilizare aplicatie George</b></span></button>
+        <p id="suport"></p>
+        <button class="button" style="vertical-align:middle" onclick="detalii_diagnostic()"><span><b>Diagnostic financiar gratuit</b></span></button>
+        <p id="diagnostic"></p>
+        <button class="button" style="vertical-align:middle" onclick="detalii_nevoie_personale()"><span><b>Credit de nevoi personale</b></span></button>
+        <p id="nevoie_personale"></p>
+        <button class="button" style="vertical-align:middle" onclick="detalii_ipotecar()"><span><b>Credit ipotecar</b></span></button>
+        <p id="ipotecar"></p>
+        <button class="button" style="vertical-align:middle" onclick="detalii_economisire()"><span><b>Economisire</b></span></button>
+        <p id="economisire"></p>
+        <button class="button" style="vertical-align:middle" onclick="detalii_contracte()"><span><b>Contracte BpL</b></span></button>
+        <p id="contracte"></p>
+        <button class="button" style="vertical-align:middle" onclick="detalii_investitii_s()"><span><b>Investitii - subscriere</b></span></button>
+        <p id="investitii_s"></p>
+        <button class="button" style="vertical-align:middle" onclick="detalii_investitii_r()"><span><b>Investitii - rascumparare</b></span></button>
+        <p id="investitii_r"></p>
+        <button class="button" style="vertical-align:middle" onclick="detalii_asigurare()"><span><b>Asigurare</b></span></button>
+        <p id="asigurare"></p>
+        <button class="button" style="vertical-align:middle" onclick="detalii_pensie()"><span><b>Pensie privata</b></span></button>
+        <p id="pensie"></p>
+</body>
+</html>
