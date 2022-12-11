@@ -23,6 +23,14 @@
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <script>
+        window.localStorage.setItem('fname', 'none')
+        window.localStorage.setItem('lname', 'none')
+        window.localStorage.setItem('email', 'none')
+        window.localStorage.setItem('message', 'none')
+        window.localStorage.setItem('cnp', 'none')
+        window.localStorage.setItem('telefon', 'none')
+    </script>
     <div class="container">
             <div class="enunt">
                 <h1><b>Date programare</b></h1>
@@ -84,7 +92,7 @@
                         <h5 for="message"><b>Message: </b></h5>
                         <textarea id="message" rows="3" class="form-control"></textarea>
                     </div>
-                    <button class="btn btn-primary"onclick="sendMail()">Submit</button>
+                    <button class="btn btn-primary" onclick="saveData()"><a href="confirmare.html">Submit</a></button>
             </div>
 </body>
 </html>
