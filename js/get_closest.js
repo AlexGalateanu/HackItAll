@@ -1,3 +1,6 @@
+export let lat_fin;
+export let lon_fin;
+
 var x = document.getElementById("demo");
 
 async function getdata() {
@@ -29,6 +32,7 @@ async function show_chosen_position(position) {
     let id1=0, id2=0, id3=0, dis1 = 20, dis2 = 20, dis3 = 20;
     let i, j;
     let lat, lon;
+    
 
   //  for (i = 0; i < 5; i++)
   //      dis[i] = 0;
@@ -73,6 +77,8 @@ async function show_chosen_position(position) {
           html += `<button type="button"> \`Nume:${detail.brn}<br>Strada:${detail.br_street}<br>Telefon:${detail.telephone}<br>Program:<br>
           Luni-Vineri:${detail.schedule.mf}<br>Sambata:${detail.schedule.sat}<br>Duminica:${detail.schedule.sun}<br>
           \`</button><br>`
+          lat_fin  = detail.location.latitude;
+          lon_fin = detail.location.longitude;
           return
         }
     });
@@ -98,7 +104,7 @@ async function show_chosen_position(position) {
     let container = document.querySelector('.container');
     container.insertAdjacentHTML("beforeend", html);
 
-    const fs = require('fs')
+    
       
     // Data which will write in a file.
 }

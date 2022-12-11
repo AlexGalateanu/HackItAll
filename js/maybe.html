@@ -7,78 +7,8 @@
 <body>
     <div class="container">Ceva sa testez <br></div>
     <div>
-        <script >
-            var fs = require('fs');
-const express = require('express');
-const bodyParser = require('body-parser');
-
-var fileName = './information.json';
-
-const app = express();
-app.use(bodyParser.urlencoded({ extended: false }));
-app.use(bodyParser.json());
-
-// maybe use this instead of bodyParser:
-//app.use(express.json());
-
-const cors = require('cors');
-const { fileURLToPath } = require('url');
-
-app.get('/status', alldata);
-function alldata(request, response) {
-    response.send(file);
-}
-
-app.post('/status', (req, res) => {
-    if (!req.is('application/json')) {
-        res.status(500);
-        res.send('500 - Server Error');
-    } else {
-
-        // read full config file:
-        var src = fs.readFileSync(fileName);
-
-        // convert src json text to js object
-        var srcObj = JSON.parse(src);
-
-        // convert req json text to js object
-        var reqObj = JSON.parse(req.body);
-
-        // update the src with the new stuff in the req
-        for(var prop in reqObj){
-            srcObj[prop] = reqObj[prop];
-        }
-
-        // update any additional things you want to do manually like this
-        srcObj.bob = "creep";
-
-        // convert the updated src object back to JSON text
-        var updatedJson = JSON.stringify(srcObj, null, 4);
-
-        // write the updated src back down to the file system
-        fs.writeFile(
-            fileName,
-            updatedJson,
-            function (err) {
-                if (err) {
-                    return console.error(err);
-                }
-                console.log(updatedJson);
-                console.log('updated ' + fileName);
-            }
-        );
-
-        res.send(updatedJson);
-    }
-});
-
-const PORT = process.env.PORT || 3000;
-
-app.listen(PORT, () =>
-    console.log(`Server running on: http://localhost:${PORT}`)
-);
-
-//res.status(201);
+        <script type="moduule" src="clear.js">
+            
             </script></div>
 </body>
 </html>
