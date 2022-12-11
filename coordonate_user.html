@@ -1,25 +1,30 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
 
+    <link rel="stylesheet" type="text/css" href="./Harta/style.css" />
+    <script type="module" src="./Harta/index.js"></script>
+    <title>Location Button Demo</title>
+</head>
 <body>
-<p id="demo"></p>
+    <div class="container">Ceva sa testez <br></div>
+    <div>
+        <script type="module" src="./js/get_closest.js"> </script></script></div>
+        <div id="map"></div>
 
-<script>
-var x = document.getElementById("demo");
+        <!-- 
+         The `defer` attribute causes the callback to execute after the full HTML
+         document has been parsed. For non-blocking uses, avoiding race conditions,
+         and consistent behavior across browsers, consider loading using Promises
+         with https://www.npmjs.com/package/@googlemaps/js-api-loader.
+        -->
+        <script
+          src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDXYtgmCzL3hCmV2WKF4Ei5sFBj9Utfh5I&callback=initMap&v=weekly"
+          defer
+        ></script>
 
-function getLocation() {
-  if (navigator.geolocation) {
-    navigator.geolocation.getCurrentPosition(showPosition);
-  } else { 
-    x.innerHTML = "Geolocation is not supported by this browser.";
-  }
-}
-
-function showPosition(position) {
-  x.innerHTML = "Latitude: " + position.coords.latitude + 
-  "<br>Longitude: " + position.coords.longitude;
-}
-getLocation();
-</script>
 </body>
 </html>

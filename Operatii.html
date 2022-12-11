@@ -2,51 +2,25 @@
 <html lang="en">
 <head>
     <title>Document</title>
+    <link rel="stylesheet" href="stil.css"> 
+    <script scr="app.js"></script>
 </head>
 <body>
-    <style>
-        .button {
-          display: inline-block;
-          border-radius: 4px;
-          background-color: rgb(0, 123, 255);
-          border: none;
-          color: #FFFFFF;
-          text-align: center;
-          font-size: 15px;
-          padding: 8px;
-          width: 300px;
-          transition: all 0.5s;
-          cursor: pointer;
-          margin: 5px;
-        }
-        
-        .button span {
-          cursor: pointer;
-          display: inline-block;
-          position: relative;
-          transition: 0.5s;
-        }
-        
-        .button span:after {
-          content: '\00bb';
-          position: absolute;
-          opacity: 0;
-          top: 0;
-          right: -20px;
-          transition: 0.5s;
-        }
-        
-        .button:hover span {
-          padding-right: 25px;
-        }
-        
-        .button:hover span:after {
-          opacity: 1;
-          right: 0;
-        }
-        </style>
+        <div class="container">
+            <div class="gallery">
+                <a href="https://www.bcr.ro/ro/persoane-fizice">
+                <img src="logo-BCR-high-resolution-1980x1080-1140x560-1555731826.jpg" >
+                
+            </a>
+            </div>
+            <div class="poza">
+            <img src="George-2521287134.png">
+        </div>
+        <h2> </h2>
+        <h2> </h2>
         <h2><b>Despre ce vrei sa vorbim?</b></h2>
-        <h4>Alege unul dintre subiectele de mai jos, pentru care programezi vizita in unitate.</h4>
+        <h4><b>Alege unul dintre subiectele de mai jos, pentru care programezi vizita in unitate</b>.</h4>
+        
         <script>
             function detalii_depunere() {
                 document.getElementById("rata").innerHTML = "";
@@ -383,40 +357,73 @@
                 document.getElementById("depunere").innerHTML = "";
                 document.getElementById("asigurare").innerHTML = "";
                 document.getElementById("pensie").innerHTML = "";
-                document.getElementById("pensie").innerHTML = "Pilon 3 de la BCR Pensii.";
+                document.getElementById("pensie").innerHTML ="Pilon 3 de la BCR Pensii.";
             }
         </script>
-        <button class="button" style="vertical-align:middle" style=""9 onclick="detalii_depunere()"><span><b>Depunere sau retragere de bani</b></span></button>
+        <button class="button" style="vertical-align:middle" onclick="detalii_depunere()"><span><b>Depunere sau retragere de bani</b></span></button>
+        <div class="container1">
         <p id="depunere"></p>
+     </div>
         <button class="button" style="vertical-align:middle" onclick="detalii_rata()"><span><b>Plata rata credit</b></span></button>
+        <div class="container1">
         <p id="rata"></p>
+    </div>
         <button class="button" style="vertical-align:middle" onclick="detalii_operatie()"><span><b>Operatiune fara numerar</b></span></button>
+        <div class="container1">
         <p id="operatie"></p>
+    </div>
         <button class="button" style="vertical-align:middle" onclick="detalii_cont_nou()"><span><b>Deschidere cont curent</b></span></button>
+        <div class="container1">
         <p id="cont_nou"></p>
+    </div>
         <button class="button" style="vertical-align:middle" onclick="detalii_cont_minori()"><span><b>Deschidere cont minori</b></span></button>
+        <div class="container1">
         <p id="cont_minori"></p>
+    </div>
         <button class="button" style="vertical-align:middle" onclick="detalii_cont_refugiati()"><span><b>Deschidere conturi refugiati</b></span></button>
+        <div class="container1">
         <p id="cont_refugiati"></p>
+    </div>
         <button class="button" style="vertical-align:middle" onclick="detalii_suport()"><span><b>Suport utilizare aplicatie George</b></span></button>
+        <div class="container1">
         <p id="suport"></p>
+    </div>
         <button class="button" style="vertical-align:middle" onclick="detalii_diagnostic()"><span><b>Diagnostic financiar gratuit</b></span></button>
+        <div class="container1">
         <p id="diagnostic"></p>
+    </div>
         <button class="button" style="vertical-align:middle" onclick="detalii_nevoie_personale()"><span><b>Credit de nevoi personale</b></span></button>
+        <div class="container1">
         <p id="nevoie_personale"></p>
+    </div>
         <button class="button" style="vertical-align:middle" onclick="detalii_ipotecar()"><span><b>Credit ipotecar</b></span></button>
+        <div class="container1">
         <p id="ipotecar"></p>
+    </div>
         <button class="button" style="vertical-align:middle" onclick="detalii_economisire()"><span><b>Economisire</b></span></button>
+        <div class="container1">
         <p id="economisire"></p>
+    </div>
         <button class="button" style="vertical-align:middle" onclick="detalii_contracte()"><span><b>Contracte BpL</b></span></button>
+        <div class="container1">
         <p id="contracte"></p>
+    </div>
         <button class="button" style="vertical-align:middle" onclick="detalii_investitii_s()"><span><b>Investitii - subscriere</b></span></button>
+        <div class="container1">
         <p id="investitii_s"></p>
+    </div>
         <button class="button" style="vertical-align:middle" onclick="detalii_investitii_r()"><span><b>Investitii - rascumparare</b></span></button>
+        <div class="container1">
         <p id="investitii_r"></p>
+    </div>
         <button class="button" style="vertical-align:middle" onclick="detalii_asigurare()"><span><b>Asigurare</b></span></button>
+        <div class="container1">
         <p id="asigurare"></p>
+    </div>
         <button class="button" style="vertical-align:middle" onclick="detalii_pensie()"><span><b>Pensie privata</b></span></button>
+        <div class="container1">
         <p id="pensie"></p>
+        </div>
+    </div>
 </body>
 </html>
