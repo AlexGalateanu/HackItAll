@@ -4,8 +4,8 @@ function initMap() {
 
   let x1 = window.localStorage.getItem('lat1')
   let y1 = window.localStorage.getItem('lon1')
-  let x = 0;
-  let y = 0;
+  let x = parseFloat(x1);
+  let y = parseFloat(y1git );
   console.log(x1)
   console.log(y1)
   while (!x1 && !y1) {
@@ -16,7 +16,7 @@ function initMap() {
   console.log(y1)
     // The location of Uluru
     
-    const uluru = { lat: x1, lng: 26.053855 };
+    const uluru = { lat: x, lng: 26.053855 };
     // The map, centered at Uluru
     const map = new google.maps.Map(document.getElementById("map"), {
       zoom: 15,
