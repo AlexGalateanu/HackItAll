@@ -175,6 +175,8 @@ async function show_hours(id, wkend){
     let final = '';     
     
     result.forEach(result =>{
+        if (result != "")
+            
         final += `<button type="button">${result}</button> <br>`
     })
 
