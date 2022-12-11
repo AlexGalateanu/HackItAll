@@ -1,5 +1,4 @@
-export let lat_fin;
-export let lon_fin;
+var lat1, lat2, lat3, lon1, lon2, lon3;
 
 var x = document.getElementById("demo");
 
@@ -17,7 +16,7 @@ async function getdata() {
   }
 }
 
-function getLocation() {
+async function getLocation() {
   if (navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(show_chosen_position);
   } else { 
@@ -77,8 +76,8 @@ async function show_chosen_position(position) {
           html += `<button type="button"> \`Nume:${detail.brn}<br>Strada:${detail.br_street}<br>Telefon:${detail.telephone}<br>Program:<br>
           Luni-Vineri:${detail.schedule.mf}<br>Sambata:${detail.schedule.sat}<br>Duminica:${detail.schedule.sun}<br>
           \`</button><br>`
-          lat_fin  = detail.location.latitude;
-          lon_fin = detail.location.longitude;
+          lat1  = detail.location.latitude;
+          lon1 = detail.location.longitude;
           return
         }
     });
@@ -88,6 +87,8 @@ async function show_chosen_position(position) {
         html += `<button type="button"> \`Nume:${detail.brn}<br>Strada:${detail.br_street}<br>Telefon:${detail.telephone}<br>Program:<br>
         Luni-Vineri:${detail.schedule.mf}<br>Sambata:${detail.schedule.sat}<br>Duminica:${detail.schedule.sun}<br>
         \`</button><br>`
+        lat2  = detail.location.latitude;
+        lon2 = detail.location.longitude;
         return
       }
     });
@@ -97,16 +98,29 @@ async function show_chosen_position(position) {
         html += `<button type="button"> \`Nume:${detail.brn}<br>Strada:${detail.br_street}<br>Telefon:${detail.telephone}<br>Program:<br>
         Luni-Vineri:${detail.schedule.mf}<br>Sambata:${detail.schedule.sat}<br>Duminica:${detail.schedule.sun}<br>
         \`</button><br>`
+        lat3  = detail.location.latitude;
+        lon3 = detail.location.longitude;
         return
       }
+      
     });
 
     let container = document.querySelector('.container');
     container.insertAdjacentHTML("beforeend", html);
 
-    
-      
+    window.localStorage.setItem('lat1', lat1)
+    window.localStorage.setItem('lon1', lon1)
+   // console.log(lat1);
     // Data which will write in a file.
+    //console.log(window.localStorage.getItem('lat1'))
+    //console.log(window.localStorage.getItem('lon1'))
+    
 }
 
-getLocation()
+
+async function call_getlocation() {
+  await getLocation()
+  
+//console.log(lat1);
+}
+call_getlocation()
