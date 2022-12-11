@@ -26,7 +26,7 @@ async function show_chosen_position(position) {
     let detail = await getdata();
     let html = '';
     let  val_la, val_lo, val_fi;
-    let id1, id2, id3, dis1 = 20, dis2 = 20, dis3 = 20;
+    let id1=0, id2=0, id3=0, dis1 = 20, dis2 = 20, dis3 = 20;
     let i, j;
     let lat, lon;
 
@@ -42,17 +42,29 @@ async function show_chosen_position(position) {
         val_fi = val_la + val_lo;
         val_fi = Math.sqrt(val_fi);
 
-        html += val_fi + ` ` + detail.branchId + '<br>';
 
         if (val_fi < dis1) {
+            dis3 = dis2;
+            dis2 = dis1;
+            dis1 = val_fi;
 
+            id3 = id2;
+            id2 = id1;
+            id1 = detail.branchId;
         } else if (val_fi < dis2) {
+            dis3 = dis2;
+            dis2 = val_fi;
+
+            id3 = id2;
+            id2 = detail.branchId
 
             } else if (val_fi < dis3) {
-
+                dis3 = val_fi;
+    
+                id3 =  detail.branchId
                 }
         
-
+                html += `${dis1} ${id1} <br>${dis2} ${id2} <br>${dis3} ${id3}`
        // html += lat + lon + `<br>`
     
     });
