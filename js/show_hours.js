@@ -176,6 +176,7 @@ async function show_hours(id, wkend){
     
     result.forEach(result =>{
         if (result != "")
+  
         final += `<a href="./test.html"><button type="button">${result}</button> <br></a>`
     })
 
