@@ -73,9 +73,9 @@ async function show_chosen_position(position) {
 
     detail.forEach(detail => {
         if (detail.branchId == id1) {
-          html += `<button type="button"> \`Nume:${detail.brn}<br>Strada:${detail.br_street}<br>Telefon:${detail.telephone}<br>Program:<br>
+          html += `<button type="button"> \Nume:<a href="./calendar.html">${detail.brn}</a><br>Strada:${detail.br_street}<br>Telefon:${detail.telephone}<br>Program:<br>
           Luni-Vineri:${detail.schedule.mf}<br>Sambata:${detail.schedule.sat}<br>Duminica:${detail.schedule.sun}<br>
-          \`</button><br>`
+          \</button><br>`
           lat1  = detail.location.latitude;
           lon1 = detail.location.longitude;
           return
@@ -84,9 +84,9 @@ async function show_chosen_position(position) {
 
     detail.forEach(detail => {
       if (detail.branchId == id2) {
-        html += `<button type="button"> \`Nume:${detail.brn}<br>Strada:${detail.br_street}<br>Telefon:${detail.telephone}<br>Program:<br>
+        html += `<button type="button"> \Nume:<a href="./calendar.html">${detail.brn }</a><br>Strada:${detail.br_street}<br>Telefon:${detail.telephone}<br>Program:<br>
         Luni-Vineri:${detail.schedule.mf}<br>Sambata:${detail.schedule.sat}<br>Duminica:${detail.schedule.sun}<br>
-        \`</button><br>`
+        \</button><br>`
         lat2  = detail.location.latitude;
         lon2 = detail.location.longitude;
         return
@@ -95,9 +95,9 @@ async function show_chosen_position(position) {
 
     detail.forEach(detail => {
       if (detail.branchId == id3) {
-        html += `<button type="button"> \`Nume:${detail.brn}<br>Strada:${detail.br_street}<br>Telefon:${detail.telephone}<br>Program:<br>
+        html += `<button type="button"> \Nume:<a href="./calendar.html">${detail.brn}</a><br>Strada:${detail.br_street}<br>Telefon:${detail.telephone}<br>Program:<br>
         Luni-Vineri:${detail.schedule.mf}<br>Sambata:${detail.schedule.sat}<br>Duminica:${detail.schedule.sun}<br>
-        \`</button><br>`
+        \</button><br>`
         lat3  = detail.location.latitude;
         lon3 = detail.location.longitude;
         return
