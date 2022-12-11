@@ -41,8 +41,7 @@ async function show_chosen_position(position) {
         val_lo = (position.coords.longitude - lon) * (position.coords.longitude - lon);
         val_fi = val_la + val_lo;
         val_fi = Math.sqrt(val_fi);
-
-
+        html = ""
         if (val_fi < dis1) {
             dis3 = dis2;
             dis2 = dis1;
@@ -56,21 +55,52 @@ async function show_chosen_position(position) {
             dis2 = val_fi;
 
             id3 = id2;
-            id2 = detail.branchId
+            id2 = detail.branchId;
 
             } else if (val_fi < dis3) {
                 dis3 = val_fi;
     
-                id3 =  detail.branchId
+                id3 =  detail.branchId;
                 }
         
-                html += `${dis1} ${id1} <br>${dis2} ${id2} <br>${dis3} ${id3}`
+            //    html += `${dis1} ${id1} <br>${dis2} ${id2} <br>${dis3} ${id3} <br><br>`
        // html += lat + lon + `<br>`
     
     });
-    let container = document.querySelector('.container');
-    container.innerHTML = html;
 
+    detail.forEach(detail => {
+        if (detail.branchId == id1) {
+          html += `<button type="button"> \`Nume:${detail.brn}<br>Strada:${detail.br_street}<br>Telefon:${detail.telephone}<br>Program:<br>
+          Luni-Vineri:${detail.schedule.mf}<br>Sambata:${detail.schedule.sat}<br>Duminica:${detail.schedule.sun}<br>
+          \`</button><br>`
+          return
+        }
+    });
+
+    detail.forEach(detail => {
+      if (detail.branchId == id2) {
+        html += `<button type="button"> \`Nume:${detail.brn}<br>Strada:${detail.br_street}<br>Telefon:${detail.telephone}<br>Program:<br>
+        Luni-Vineri:${detail.schedule.mf}<br>Sambata:${detail.schedule.sat}<br>Duminica:${detail.schedule.sun}<br>
+        \`</button><br>`
+        return
+      }
+    });
+
+    detail.forEach(detail => {
+      if (detail.branchId == id3) {
+        html += `<button type="button"> \`Nume:${detail.brn}<br>Strada:${detail.br_street}<br>Telefon:${detail.telephone}<br>Program:<br>
+        Luni-Vineri:${detail.schedule.mf}<br>Sambata:${detail.schedule.sat}<br>Duminica:${detail.schedule.sun}<br>
+        \`</button><br>`
+        return
+      }
+    });
+
+    let container = document.querySelector('.container');
+    container.insertAdjacentHTML("beforeend", html);
+
+    const fs = require('fs')
+      
+    // Data which will write in a file.
 }
 
 getLocation()
