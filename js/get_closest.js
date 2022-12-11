@@ -110,6 +110,12 @@ async function show_chosen_position(position) {
 
     window.localStorage.setItem('lat1', lat1)
     window.localStorage.setItem('lon1', lon1)
+    window.localStorage.setItem('lat2', lat2)
+    window.localStorage.setItem('lon2', lon2)
+    window.localStorage.setItem('lat3', lat3)
+    window.localStorage.setItem('lon3', lon3)
+    window.localStorage.setItem('latc', position.coords.latitude)
+    window.localStorage.setItem('lonc', position.coords.longitude)
    // console.log(lat1);
     // Data which will write in a file.
     //console.log(window.localStorage.getItem('lat1'))
