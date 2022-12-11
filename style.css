@@ -6,16 +6,19 @@ body{
     background:linear-gradient(-45deg, #EE7752,#E73C7E,#23A6D5,#23D5AB);
     background-size: 400% 400%;
     position: relative;
+    animation: change 10s ease-in-out infinite;
 }
 h1{
     font-family:  -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,Liberation Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
-    font-size: 1rem;
+    font-size: 3rem;
+    color: Navy;
     text-align: center;
 }
 h4{
-    font-family: "Georgia", Times, serif;
-    font-size:150%;
+    font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,Liberation Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
+    font-size:1.6rem;
     text-align: center;
+    color: rgb(61, 61, 129);
 }
 
 .container {
@@ -37,16 +40,19 @@ img{
     display:block;
     margin-left: auto;
     margin-right: auto;
+    border-radius: 10px;
+    width: auto;
+    height: 150px;
 }
-
 @keyframes change {
     0%{
-        background-position: 0-50%;
+        background-position: 0 50%;
     }
     50%{
-        background-position: 100%-50%;
+        background-position: 100% 50%;
     }
     100%{
-        background-position: 0-50%;
+        background-position: 0 50%;
     }
 }
+
