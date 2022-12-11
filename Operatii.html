@@ -3,9 +3,12 @@
 <head>
     <title>Document</title>
     <link rel="stylesheet" href="stil.css"> 
-    <script scr="app.js"></script>
+   
 </head>
 <body>
+    <script>
+        window.localStorage.setItem('scop', 'none')
+    </script>
         <div class="container">
             <div class="gallery">
                 <a href="https://www.bcr.ro/ro/persoane-fizice">
@@ -23,6 +26,7 @@
         
         <script>
             function detalii_depunere() {
+                window.localStorage.setItem('scop', 'Depunere sau retragere bani')
                 document.getElementById("rata").innerHTML = "";
                 document.getElementById("operatie").innerHTML = "";
                 document.getElementById("cont_nou").innerHTML = "";
@@ -44,6 +48,7 @@
         </script>
         <script>
             function detalii_rata() {
+                window.localStorage.setItem('scop', 'Plata rata de credit')
                 document.getElementById("rata").innerHTML = "";
                 document.getElementById("operatie").innerHTML = "";
                 document.getElementById("cont_nou").innerHTML = "";
@@ -65,6 +70,7 @@
         </script>
         <script>
             function detalii_operatie() {
+                window.localStorage.setItem('scop', 'Operatiune fara numerar')
                 document.getElementById("rata").innerHTML = "";
                 document.getElementById("operatie").innerHTML = "";
                 document.getElementById("cont_nou").innerHTML = "";
@@ -86,6 +92,7 @@
         </script>
         <script>
             function detalii_cont_nou() {
+                window.localStorage.setItem('scop', 'Dechidere cont curent')
                 document.getElementById("rata").innerHTML = "";
                 document.getElementById("operatie").innerHTML = "";
                 document.getElementById("cont_nou").innerHTML = "";
@@ -107,6 +114,7 @@
         </script>
         <script>
             function detalii_cont_minori() {
+                window.localStorage.setItem('scop', 'Deschidere cont minori')
                 document.getElementById("rata").innerHTML = "";
                 document.getElementById("operatie").innerHTML = "";
                 document.getElementById("cont_nou").innerHTML = "";
@@ -131,6 +139,7 @@
         </script>
         <script>
             function detalii_cont_refugiati() {
+                window.localStorage.setItem('scop', 'Deschidere conturi refugiati')
                 document.getElementById("rata").innerHTML = "";
                 document.getElementById("operatie").innerHTML = "";
                 document.getElementById("cont_nou").innerHTML = "";
@@ -152,6 +161,7 @@
         </script>
         <script>
             function detalii_suport() {
+                window.localStorage.setItem('scop', 'Suport utilizare aplicatiei George')
                 document.getElementById("rata").innerHTML = "";
                 document.getElementById("operatie").innerHTML = "";
                 document.getElementById("cont_nou").innerHTML = "";
@@ -173,6 +183,7 @@
         </script>
         <script>
             function detalii_diagnostic() {
+                window.localStorage.setItem('scop', 'Disagnostic financiar gratuit')
                 document.getElementById("rata").innerHTML = "";
                 document.getElementById("operatie").innerHTML = "";
                 document.getElementById("cont_nou").innerHTML = "";
@@ -194,6 +205,7 @@
         </script>
         <script>
             function detalii_nevoie_personale() {
+                window.localStorage.setItem('scop', 'Credit de nevoi personale')
                 document.getElementById("rata").innerHTML = "";
                 document.getElementById("operatie").innerHTML = "";
                 document.getElementById("cont_nou").innerHTML = "";
@@ -215,6 +227,7 @@
         </script>
         <script>
             function detalii_ipotecar() {
+                window.localStorage.setItem('scop', 'Credit ipotecar')
                 document.getElementById("rata").innerHTML = "";
                 document.getElementById("operatie").innerHTML = "";
                 document.getElementById("cont_nou").innerHTML = "";
@@ -236,6 +249,7 @@
         </script>
         <script>
             function detalii_economisire() {
+                window.localStorage.setItem('scop', 'Economisire')
                 document.getElementById("rata").innerHTML = "";
                 document.getElementById("operatie").innerHTML = "";
                 document.getElementById("cont_nou").innerHTML = "";
@@ -257,6 +271,7 @@
         </script>
         <script>
             function detalii_contracte() {
+                window.localStorage.setItem('scop', 'Contracte BpL')
                 document.getElementById("rata").innerHTML = "";
                 document.getElementById("operatie").innerHTML = "";
                 document.getElementById("cont_nou").innerHTML = "";
@@ -278,6 +293,7 @@
         </script>
         <script>
             function detalii_investitii_s() {
+                window.localStorage.setItem('scop', 'Investitii - subscriere')
                 document.getElementById("rata").innerHTML = "";
                 document.getElementById("operatie").innerHTML = "";
                 document.getElementById("cont_nou").innerHTML = "";
@@ -299,6 +315,7 @@
         </script>
         <script>
             function detalii_investitii_r() {
+                window.localStorage.setItem('scop', 'Investitii - rascumparare')
                 document.getElementById("rata").innerHTML = "";
                 document.getElementById("operatie").innerHTML = "";
                 document.getElementById("cont_nou").innerHTML = "";
@@ -320,6 +337,7 @@
         </script>
         <script>
             function detalii_asigurare() {
+                window.localStorage.setItem('scop', 'Asigurare')
                 document.getElementById("rata").innerHTML = "";
                 document.getElementById("operatie").innerHTML = "";
                 document.getElementById("cont_nou").innerHTML = "";
@@ -341,6 +359,7 @@
         </script>
         <script>
             function detalii_pensie() {
+                window.localStorage.setItem('scop', 'Pensie Privata')
                 document.getElementById("rata").innerHTML = "";
                 document.getElementById("operatie").innerHTML = "";
                 document.getElementById("cont_nou").innerHTML = "";
