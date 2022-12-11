@@ -177,7 +177,8 @@ async function show_hours(id, wkend){
     result.forEach(result =>{
         if (result != "")
   
-        final += `<button type="button"><a href="./test.html">${result}</a></button> <br>`
+        final += `<button type="button", onclick="window.localStorage.setItem('period', '${result}')"><a href="./test.html">${result}</a></button> <br>`
+        
     })
 
     let container = document.querySelector('.container');

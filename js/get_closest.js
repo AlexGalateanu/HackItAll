@@ -73,7 +73,10 @@ async function show_chosen_position(position) {
 
     detail.forEach(detail => {
         if (detail.branchId == id1) {
-          html += `<button type="button"> \Nume:<a href="./calendar.html">${detail.brn}</a><br>Strada:${detail.br_street}<br>Telefon:${detail.telephone}<br>Program:<br>
+          let x = toString(detail.telephone)
+          html += `<button type="button" onclick="window.localStorage.setItem('id', '${detail.branchId}');
+          window.localStorage.setItem('address', '${detail.location.address.street}'); 
+          window.localStorage.getItem('bn_telefon', '${x}')"> \Nume:<a href="./calendar.html">${detail.brn}</a><br>Strada:${detail.br_street}<br>Telefon:${detail.telephone}<br>Program:<br>
           Luni-Vineri:${detail.schedule.mf}<br>Sambata:${detail.schedule.sat}<br>Duminica:${detail.schedule.sun}<br>
           \</button><br>`
           lat1  = detail.location.latitude;
@@ -84,7 +87,10 @@ async function show_chosen_position(position) {
 
     detail.forEach(detail => {
       if (detail.branchId == id2) {
-        html += `<button type="button"> \Nume:<a href="./calendar.html">${detail.brn }</a><br>Strada:${detail.br_street}<br>Telefon:${detail.telephone}<br>Program:<br>
+        let x = toString(detail.telephone)
+        html += `<button type="button" onclick="window.localStorage.setItem('id', '${detail.branchId}');
+        window.localStorage.setItem('address', '${detail.location.address.street}');
+        window.localStorage.getItem('bn_telefon', '${x}')""> \Nume:<a href="./calendar.html">${detail.brn }</a><br>Strada:${detail.br_street}<br>Telefon:${detail.telephone}<br>Program:<br>
         Luni-Vineri:${detail.schedule.mf}<br>Sambata:${detail.schedule.sat}<br>Duminica:${detail.schedule.sun}<br>
         \</button><br>`
         lat2  = detail.location.latitude;
@@ -95,7 +101,10 @@ async function show_chosen_position(position) {
 
     detail.forEach(detail => {
       if (detail.branchId == id3) {
-        html += `<button type="button"> \Nume:<a href="./calendar.html">${detail.brn}</a><br>Strada:${detail.br_street}<br>Telefon:${detail.telephone}<br>Program:<br>
+        let x = toString(detail.telephone)
+        html += `<button type="button" onclick="window.localStorage.setItem('id', '${detail.branchId}');
+        window.localStorage.setItem('address', '${detail.location.address.street}');
+        window.localStorage.getItem('bn_telefon', '${x}')""> \Nume:<a href="./calendar.html">${detail.brn}</a><br>Strada:${detail.br_street}<br>Telefon:${detail.telephone}<br>Program:<br>
         Luni-Vineri:${detail.schedule.mf}<br>Sambata:${detail.schedule.sat}<br>Duminica:${detail.schedule.sun}<br>
         \</button><br>`
         lat3  = detail.location.latitude;
@@ -130,3 +139,6 @@ async function call_getlocation() {
 //console.log(lat1);
 }
 call_getlocation()
+window.localStorage.setItem('id', 'none');
+window.localStorage.setItem('address', 'none');
+window.localStorage.setItem('bn_telefon', 'none')
