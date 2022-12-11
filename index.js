@@ -1,5 +1,6 @@
 function sendMail(){
     var params = {
+        fname: window.localStorage.getItem("")
         fname: document.getElementById("fname").value,
         lname: document.getElementById("lname").value,
         email: document.getElementById("email").value,
