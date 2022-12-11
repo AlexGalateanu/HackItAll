@@ -21,6 +21,11 @@ h4{
     color: rgb(61, 61, 129);
 }
 
+button{
+    color: aliceblue;
+    background-color: aqua;
+}
+
 .container {
 
 margin-top: 20px;

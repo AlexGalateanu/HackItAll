@@ -23,14 +23,7 @@
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <script>
-        window.localStorage.setItem('fname', 'none')
-        window.localStorage.setItem('lname', 'none')
-        window.localStorage.setItem('email', 'none')
-        window.localStorage.setItem('message', 'none')
-        window.localStorage.setItem('cnp', 'none')
-        window.localStorage.setItem('telefon', 'none')
-    </script>
+
     <div class="container">
             <div class="enunt">
                 <h1><b>Date programare</b></h1>
@@ -82,17 +75,18 @@
                     <div class="form-group">
                         <h5 for="email"><b>Telefon:</b></h5>
                         <input
-                        type="number"
+                        type="text"
                         class="form-control"
                         id="telefon"
                         placeholder="ex: 0777 777 777 "
                         />
                     </div>
                     <div class="form-group">
-                        <h5 for="message"><b>Message: </b></h5>
+                        <h5 for="message"><b>Mesaj pentru noi: </b></h5>
                         <textarea id="message" rows="3" class="form-control"></textarea>
                     </div>
-                    <button class="btn btn-primary" onclick="saveData()"><a href="confirmare.html">Submit</a></button>
+                    <button class="btn btn-primary" onclick="sendMail()">Trimite mail de amintire</button>
+                    <button class="btn btn-primary" onclick="saveData()">Mai departe</button>
             </div>
 </body>
 </html>

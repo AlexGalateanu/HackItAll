@@ -1,6 +1,6 @@
 function sendMail(){
     var params = {
-        fname: window.localStorage.getItem("")
+        
         fname: document.getElementById("fname").value,
         lname: document.getElementById("lname").value,
         email: document.getElementById("email").value,
@@ -15,14 +15,8 @@ function sendMail(){
     emailjs
     .send(serviceID,templateID,params)
     .then((res) => {
-        document.getElementById("fname").value = "";
-        document.getElementById("email").value = "";
-        document.getElementById("message").value = "";
-        document.getElementById("lname").value = "";
-        document.getElementById("cnp").value = "";
-        document.getElementById("telefon").value = "";
         console.log(res);
-        alert("s-a trimis mesajul");
+        alert("S-a trimis emailul, va rog verificati");
     })
     .catch((err) => console.log(err));
 }

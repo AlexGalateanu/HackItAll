@@ -57,6 +57,9 @@
         font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,Liberation Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
         background-color: rgba(170, 170, 189, 0.5) ;
     }
+    button{
+      color: #FFFFFF;
+    }
     .container {
 
       margin-top: 20px;
